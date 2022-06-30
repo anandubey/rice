@@ -1,0 +1,511 @@
+#             ______            __
+#      ____  / ______  ______  / /_  ___  _____
+#     / __ \/___ \/ / / / __ \/ __ \/ _ \/ ___/
+#    / /_/ ____/ / /_/ / /_/ / / / /  __/ /
+#   / .___/_____/\__, / .___/_/ /_/\___/_/
+#  /_/          /____/_/
+
+
+env:
+  TERM: xterm-256color
+
+window:
+
+  opacity: 0.95
+
+  dimensions:
+    columns: 100
+    lines: 30
+  
+  padding:
+    x: 8
+    y: 8
+
+  dynamic_padding: true
+
+  decorations: full
+
+  title: Alacritty
+
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+  gtk_theme_variant: dark
+
+scrolling:
+  history: 10000
+
+  multiplier: 3
+
+font:
+  size: 12.0
+  normal:
+    family: JetBrainsMono Medium Nerd Font
+    #family: FantasqueSansMono Nerd Font Mono
+
+  bold:
+    family:  JetBrainsMono Medium Nerd Font
+
+  italic:
+    family: JetBrainsMono Medium Nerd Font
+
+  bold_italic:
+    family: JetBrainsMono Medium Nerd Font
+    # family:  FantasqueSansMono Nerd Font Mono
+
+  offset:
+    x: 1
+    y: 2
+
+
+ 
+draw_bold_text_with_bright_colors: true
+
+
+save_to_clipboard: true
+
+
+window.dynamic_title: true
+
+
+cursor:
+  style: Underline
+
+
+live_config_reload: true
+
+
+shell:
+  program: /bin/zsh
+
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+
+
+# # Custom colorscheme fitting Sweetified theme
+# colors:
+#   primary:
+#     background: '0x0a1124'
+#     foreground: '0xeec49a'
+#   cursor:
+#     text:       '0x0a1124'
+#     cursor:     '0xeec49a'
+#   normal:
+#     black:      '0x0a1124'
+#     red:        '0x5F4149'
+#     green:      '0xEB3247'
+#     yellow:     '0xBC4349'
+#     blue:       '0xF35645'
+#     magenta:    '0xF6A73B'
+#     cyan:       '0xFAD32F'
+#     white:      '0xeec49a'
+#   bright:
+#     black:      '0xa6896b'
+#     red:        '0x5F4149'
+#     green:      '0xEB3247'
+#     yellow:     '0xBC4349'
+#     blue:       '0xF35645'
+#     magenta:    '0xF6A73B'
+#     cyan:       '0xFAD32F'
+#     white:      '0xeec49a'
+
+
+# # Colors (Monokai Pro)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1d2021'
+#     foreground: '0xfff1f3'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x2c2525'
+#     red:     '0xfd6883'
+#     green:   '0xadda78'
+#     yellow:  '0xf9cc6c'
+#     blue:    '0xf38d70'
+#     magenta: '0xa8a9eb'
+#     cyan:    '0x85dacc'
+#     white:   '0xfff1f3'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x72696a'
+#     red:     '0xfd6883'
+#     green:   '0xadda78'
+#     yellow:  '0xf9cc6c'
+#     blue:    '0xf38d70'
+#     magenta: '0xa8a9eb'
+#     cyan:    '0x85dacc'
+#     white:   '0xfff1f3'
+
+
+# # Colors (One Dark)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1e2127'
+#     foreground: '0xabb2bf'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x1e2127'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xd19a66'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xabb2bf'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x5c6370'
+#     red:     '0xe06c75'
+#     green:   '0x98c379'
+#     yellow:  '0xd19a66'
+#     blue:    '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan:    '0x56b6c2'
+#     white:   '0xffffff'
+
+
+
+# # Colors (One Half Dark)
+# colors:
+#   primary:
+#     background: '0x282c34'
+#     foreground: '0xdcdfe4'
+
+#   normal:
+#     black: '0x282c34'
+#     red: '0xe06c75'
+#     green: '0x98c379'
+#     yellow: '0xe5c07b'
+#     blue: '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan: '0x56b6c2'
+#     white: '0xdcdfe4'
+
+#   bright:
+#     black: '0x5c6370'
+#     red: '0xe06c75'
+#     green: '0x98c379'
+#     yellow: '0xe5c07b'
+#     blue: '0x61afef'
+#     magenta: '0xc678dd'
+#     cyan: '0x56b6c2'
+#     white: '0xdcdfe4'
+
+
+
+# # XMONAD
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x181a20'
+#     foreground: '0xeeffff'
+
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: '0x212121'
+#     cursor: '0xeeffff'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x212121'
+#     red:     '0xf07178'
+#     green:   '0xc3e88d'
+#     yellow:  '0xffcb6b'
+#     blue:    '0x82aaff'
+#     magenta: '0xc792ea'
+#     cyan:    '0x89ddff'
+#     white:   '0xeeffff'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x4a4a4a'
+#     red:     '0xf07178'
+#     green:   '0xc3e88d'
+#     yellow:  '0xffcb6b'
+#     blue:    '0x82aaff'
+#     magenta: '0xc792ea'
+#     cyan:    '0x89ddff'
+#     white:   '0xffffff'
+
+#   indexed_colors:
+#     - { index: 16, color: '0xf78c6c' }
+#     - { index: 17, color: '0xff5370' }
+#     - { index: 18, color: '0x303030' }
+#     - { index: 19, color: '0x353535' }
+#     - { index: 20, color: '0xb2ccd6' }
+#     - { index: 21, color: '0xeeffff' }
+
+
+# ########################  DRACULA  COLOR SCHEME  ##############################
+# colors:
+#   primary:
+#     background: '0x282a36'
+#     foreground: '0xf8f8f2'
+#   cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   search:
+#     matches:
+#       foreground: '0x44475a'
+#       background: '0x50fa7b'
+#     focused_match:
+#       foreground: '0x44475a'
+#       background: '0xffb86c'
+#     bar:
+#       background: '0x282a36'
+#       foreground: '0xf8f8f2'
+#   line_indicator:
+#     foreground: None
+#     background: None
+#   selection:
+#     text: CellForeground
+#     background: '0x44475a'
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xff5555'
+#     green:   '0x50fa7b'
+#     yellow:  '0xf1fa8c'
+#     blue:    '0xbd93f9'
+#     magenta: '0xff79c6'
+#     cyan:    '0x8be9fd'
+#     white:   '0xbfbfbf'
+#   bright:
+#     black:   '0x4d4d4d'
+#     red:     '0xff6e67'
+#     green:   '0x5af78e'
+#     yellow:  '0xf4f99d'
+#     blue:    '0xcaa9fa'
+#     magenta: '0xff92d0'
+#     cyan:    '0x9aedfe'
+#     white:   '0xe6e6e6'
+#   dim:
+#     black:   '0x14151b'
+#     red:     '0xff2222'
+#     green:   '0x1ef956'
+#     yellow:  '0xebf85b'
+#     blue:    '0x4d5b86'
+#     magenta: '0xff46b0'
+#     cyan:    '0x59dffc'
+#     white:   '0xe6e6d1'
+
+
+
+
+
+
+
+# ########################  MONOKAI  COLOR SCHEME  ############################
+# colors:
+#   primary:
+#     background: '0x272822'
+#     foreground: '0xf8f8f2'
+#   cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   search:
+#     matches:
+#       foreground: '0x414339'
+#       background: '0xA6E22E'
+#     focused_match:
+#       foreground: '0x414339'
+#       background: '0xffb86c'
+#     bar:
+#       background: '0x272822'
+#       foreground: '0xf8f8f2'
+#   line_indicator:
+#     foreground: None
+#     background: None
+#   selection:
+#     text: CellForeground
+#     background: '0x414339'
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xe95678'
+#     green:   '0xA6E22E'
+#     yellow:  '0xE6DB74'
+#     blue:    '0x66D9EF'
+#     magenta: '0xff79c6'
+#     cyan:    '0x8be9fd'
+#     white:   '0xbfbfbf'
+#   bright:
+#     black:   '0x72696a'
+#     red:     '0xfd6883'
+#     green:   '0xadda78'
+#     yellow:  '0xf9cc6c'
+#     blue:    '0xa8a9eb'
+#     magenta: '0xff92d0'
+#     cyan:    '0x85dacc'
+#     white:   '0xfff1f3'
+#   dim:
+#    black:   '0x000000'
+#    red:     '0x8c3336'
+#    green:   '0x7a8530'
+#    yellow:  '0x97822e'
+#    blue:    '0x506d8f'
+#    magenta: '0x80638e'
+#    cyan:    '0x497e7a'
+#    white:   '0x9a9a9a'
+
+
+
+########################  GRUVBOX  COLOR SCHEME  ############################
+colors:
+  primary:
+    background: '0x282828'
+    foreground: '0xF6EDD1'
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '0x414339'
+      background: '0xA6E22E'
+    focused_match:
+      foreground: '0x414339'
+      background: '0xffb86c'
+    bar:
+      background: '0x282828'
+      foreground: '0xF6EDD1'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '0x414339'
+  normal:
+    black:   '0x000000'
+    red:     '0xf2594b'
+    green:   '0xb0b846'
+    yellow:  '0xE6DB74'
+    blue:    '0x80aa9e'
+    magenta: '0xd3869b'
+    cyan:    '0x66DDAA'
+    white:   '0xbfbfbf'
+  bright:
+    black:   '0x665c54'
+    red:     '0xf2594b'
+    green:   '0xb0b846'
+    yellow:  '0xe9b143'
+    blue:    '0x9798d3'
+    magenta: '0xd3869b'
+    cyan:    '0x66DDAA'
+    white:   '0xfff1f3'
+  dim:
+   black:   '0x000000'
+   red:     '0x8c3336'
+   green:   '0x7a8530'
+   yellow:  '0x97822e'
+   blue:    '0x506d8f'
+   magenta: '0x80638e'
+   cyan:    '0x497e7a'
+   white:   '0x9a9a9a'
+
+
+# ########################  GRUVBOX  COLOR SCHEME  ############################
+# colors:
+#   primary:
+#     background: '#1e2122'
+#     foreground: '#c7b89d'
+#   cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   vi_mode_cursor:
+#     text: CellBackground
+#     cursor: CellForeground
+#   search:
+#     matches:
+#       foreground: '#404344'
+#       background: '#89b482'
+#     focused_match:
+#       foreground: '#393c3d'
+#       background: '#d6b676'
+#     bar:
+#       background: '#282b2c'
+#       foreground: '#c7b89d'
+#   line_indicator:
+#     foreground: None
+#     background: None
+#   selection:
+#     text: CellForeground
+#     background: '#414339'
+#   normal:
+#     black:   '#1a1d1e'
+#     red:     '#ec6b64'
+#     green:   '#89b482'
+#     yellow:  '#d6b676'
+#     blue:    '#6f8faf'
+#     magenta: '#cc7f94'
+#     cyan:    '#82b3a8'
+#     white:   '#c7b89d'
+#   bright:
+#     black:   '#484b4c'
+#     red:     '#e78a4e'
+#     green:   '#a9b665'
+#     yellow:  '#d1b171'
+#     blue:    '#6f8faf'
+#     magenta: '#ff75a0'
+#     cyan:    '#82b3a8'
+#     white:   '#c7b89d'
+#   dim:
+#    black:   '#000000'
+#    red:     '#8c3336'
+#    green:   '#7a8530'
+#    yellow:  '#97822e'
+#    blue:    '#506d8f'
+#    magenta: '#80638e'
+#    cyan:    '#497e7a'
+#    white:   '#9a9a9a'
+
+
+
+  #  white = "#c7b89d",
+  #  darker_black = "#1a1d1e",
+  #  black = "#1e2122", --  nvim bg
+  #  black2 = "#232627",
+  #  one_bg = "#282b2c",
+  #  one_bg2 = "#393c3d",
+  #  one_bg3 = "#404344",
+  #  grey = "#484b4c",
+  #  grey_fg = "#575a5b",
+  #  grey_fg2 = "#545758",
+  #  light_grey = "#5a5d5e",
+  #  red = "#ec6b64",
+  #  baby_pink = "#ce8196",
+  #  pink = "#ff75a0",
+  #  line = "#2c2f30", -- for lines like vertsplit
+  #  green = "#89b482",
+  #  vibrant_green = "#a9b665",
+  #  nord_blue = "#6f8faf",
+  #  blue = "#6d8dad",
+  #  yellow = "#d6b676",
+  #  sun = "#d1b171",
+  #  purple = "#b4bbc8",
+  #  dark_purple = "#cc7f94",
+  #  teal = "#749689",
+  #  orange = "#e78a4e",
+  #  cyan = "#82b3a8",
+  #  statusline_bg = "#222526",
+  #  lightbg = "#2d3031",
+  #  lightbg2 = "#252829",
+  #  pmenu_bg = "#89b482",
+  #  folder_bg = "#6d8dad",

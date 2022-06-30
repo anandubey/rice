@@ -1,0 +1,60 @@
+#!/bin/sh
+
+
+#             ______            __
+#      ____  / ______  ______  / /_  ___  _____
+#     / __ \/___ \/ / / / __ \/ __ \/ _ \/ ___/
+#    / /_/ ____/ / /_/ / /_/ / / / /  __/ /
+#   / .___/_____/\__, / .___/_/ /_/\___/_/
+#  /_/          /____/_/
+
+
+# Verbose mode for general commands
+alias cp='cp -rv --reflink=auto'
+alias mv='mv -iv'
+alias rm='rm -v'
+alias rm-r='rm -r'
+alias ln='ln -v'
+alias chmod="chmod -c"
+alias chown="chown -c"
+alias mkdir="mkdir -v"
+
+
+# Colorize commands when possible.
+alias ls="exa -al --color=always --group-directories-first --icons"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+
+# Jump to directories
+alias cses="cd $HOME/Documents/compeCoding/cses"
+alias hrank="cd $HOME/Documents/compeCoding/hackerRank"
+alias lcode="cd $HOME/Documents/compeCoding/leetcode"
+alias chef="cd $HOME/Documents/compeCoding/codechef"
+
+# Open eBooks
+alias rcpp="okular Documents/eBooks/primer.pdf > /dev/null 2>&1 & disown"
+alias ros="okular Documents/eBooks/CSE-Core/OS\ Concepts\ Galvin.pdf > /dev/null 2>&1 & disown"
+
+# Bind vim to neovim
+alias vim="nvim"
+alias svim="sudo nvim"
+alias gxx="g++ -Wall -std=c++17"
+alias gxr="g++ -std=c++17 -O3 -DNDEBUG -s"
+
+# Replace commands with better alternatives
+alias cat="bat --style header --style rules --style snip --style changes --style header"
+alias la="exa -a --color=always --group-directories-first --icons"
+alias ll="exa -l --color=always --group-directories-first --icons"
+alias l.="exa -a | egrep '^\.'"
+alias top="btop"
+# Get Clutter-free Hardware info
+alias hw="hwinfo --short"
+
+# Package management
+alias pacsync="sudo pacman -Sy"
+alias pacupdate="sudo pacman -Syu"
+alias pacins="sudo pacman -S"
+alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+
+#Get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"

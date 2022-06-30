@@ -1,0 +1,17 @@
+[user]
+	email = dubey.anandkr@gmail.com
+	name = Anand Kumar Dubey
+[color]
+	ui = true
+[color "diff"]
+	meta = yellow bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = green bold
+	changed = yellow
+	untracked = cyan
+
+[init]
+	defaultBranch = main
+
