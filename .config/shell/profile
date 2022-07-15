@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 
 
@@ -22,10 +22,11 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 
-# Clean up ~
 export ZDOTDIR=$HOME/.config/zsh
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+. "/home/bae/.local/share/cargo/env"
 

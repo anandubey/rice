@@ -1,14 +1,6 @@
 #!/bin/sh
 
 
-#             ______            __
-#      ____  / ______  ______  / /_  ___  _____
-#     / __ \/___ \/ / / / __ \/ __ \/ _ \/ ___/
-#    / /_/ ____/ / /_/ / /_/ / / / /  __/ /
-#   / .___/_____/\__, / .___/_/ /_/\___/_/
-#  /_/          /____/_/
-
-
 # Verbose mode for general commands
 alias cp='cp -rv --reflink=auto'
 alias mv='mv -iv'
@@ -37,7 +29,8 @@ alias ros="okular Documents/eBooks/CSE-Core/OS\ Concepts\ Galvin.pdf > /dev/null
 
 # Bind vim to neovim
 alias vim="nvim"
-alias svim="sudo nvim"
+alias v="nvim"
+alias sv="sudo nvim"
 alias gxx="g++ -Wall -std=c++17"
 alias gxr="g++ -std=c++17 -O3 -DNDEBUG -s"
 

@@ -11,6 +11,7 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 
+
 # Enable colors and change prompt:
 setopt promptsubst
 autoload -U colors && colors	# Load colors
@@ -25,7 +26,9 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
 # add a function to check for untracked files in the directory.
+# from https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+# 
 +vi-git-untracked(){
     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
         git status --porcelain | grep '??' &> /dev/null ; then
@@ -54,8 +57,8 @@ RPROMPT="\$vcs_info_msg_0_"
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
-
 HISTFILE=~/.cache/zsh/history
+
 
 # Load aliases and shortcuts if existent.
 # [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
@@ -72,7 +75,7 @@ zstyle ':completion:*' rehash true
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.cache/zsh/cache
+zstyle ':completion:*' cache-path ~/.cache/zsh
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
@@ -156,8 +159,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-
-fetch
 
 #if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 #    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
