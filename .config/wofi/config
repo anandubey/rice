@@ -1,0 +1,13 @@
+allow_images=true
+always_parse_args=true
+height=300
+image_size=16
+layer=overlay
+location=center
+no_actions=true
+print_command=true
+prompt=Apps
+hide_scroll=true
+columns=2
+show=drun
+width=600

@@ -1,0 +1,235 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 16,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/window"
+    ],
+
+    "modules-center": ["mpd#icon", "mpd"],
+
+    "modules-right": [
+        "idle_inhibitor",
+        "pulseaudio#sink-icon", "pulseaudio#sink", "pulseaudio#source-icon",
+        "memory#icon", "memory",
+        "network#icon", "network",
+        "clock#date-icon", "clock#date",
+        "clock#time-icon", "clock",
+        "custom/power"
+    ],
+    
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰀫",
+            "2": "󰈹",
+            "3": "󰨞",
+            "4": "󰉋",
+            "5": "󰇮",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "sway/window": {
+        "tooltip": false,
+        "format": "{}",
+        "max-length":50,
+        "rewrite": {
+            "Mozilla Firefox": "  New Tab",
+            "(.+) — Mozilla Firefox": "  $1",
+            "(.*) - Google Chrome": "  $1",
+            "(.*) - Visual Studio Code": "󰨞 $1",
+            "Alacritty": "󰣐 Alacritty"
+        }
+    },
+
+    "mpd#icon":  {
+        "format": "{stateIcon}",
+        "format-disconnected": "󰎊",
+        "format-stopped": "󰓛",
+        "on-click": "mpc toggle",
+        "interval": 2,
+        "random-icons": {
+            "off": "<span color='#f53c3c'></span> ",
+            "on": " "
+       },
+       "repeat-icons": {
+            "on": " "
+       },
+       "single-icons": {
+            "on": "1 "
+       },
+       "state-icons": {
+        "paused": "󰐊",
+        "playing": "󰏤"
+    }
+    },
+
+    "mpd":  {
+        "format": "{title}",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "awkward silence",
+        "on-click": "mpc toggle",
+        "interval": 1,
+        "random-icons": {
+            "off": "<span color='#f53c3c'></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "󰐊",
+            "playing": "󰏤"
+        }
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        }
+    },
+
+
+    "pulseaudio#sink-icon": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂯",
+        "format-bluetooth-muted": "󰂲",
+        "format-muted": "󰖁",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏵",
+            "car": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "tooltip-format": "{desc}, {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+    "pulseaudio#sink": {
+        "format": "{volume}%",
+        "format-bluetooth": "{volume}%",
+        "format-bluetooth-muted": "MUTED",
+        "format-muted": "{volume}%",
+        "tooltip-format": "{desc}, {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+    "pulseaudio#source-icon": {
+        "format": "{format_source}",
+        "format-bluetooth": "{format_source}",
+        "format-bluetooth-muted": "{format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "tooltip-format": "",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+
+
+    "battery": {
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""]
+    },
+
+
+    "memory#icon" : {
+        "format": "󰍛"
+    },
+    "memory": {
+        "format": "{used:0.1f} GB",
+        "on-click": "alacritty -e btop"
+    },
+
+    "network#icon": {
+        "format": "Disabled",
+        "format-wifi": "{icon}",
+        "tooltip-format-wifi": "󰤨:{signalStrength}%  {ifname}  {ipaddr}",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "󰤭",
+        "on-click": "alacritty -e nmtui",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"]
+    },
+    "network": {
+        "format": "Disabled",
+        "format-wifi": "{essid}",
+        "tooltip-format-wifi": "󰤨:{signalStrength}%  {ifname}  {ipaddr}",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "Disconnected",
+        "on-click": "alacritty -e nmtui"
+    },
+    "bluetooth": {
+        "controller": "main", // specify the alias of the controller if there are more than 1 on the system
+        "format": "",
+        "format-off": "󰂲",
+        "format-disabled": "", // an empty format will hide the module
+        "format-connected": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "clock#time-icon": {
+        "format" : "󱑁",
+        "today-format": "<span color='#f44336'><b>{}</b></span>",
+        "tooltip-format": "<span font='JetBrainsMonoMedium Nerd Font 18'><big>{:%d, %B %Y}</big></span>\n<span font='JetBrainsMonoMedium Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+    },
+    "clock#date-icon": {
+        "format" : "",
+        "today-format": "<span color='#f44336'><b>{}</b></span>",
+        "tooltip-format": "<span font='JetBrainsMonoMedium Nerd Font 18'><big>{:%d, %B %Y}</big></span>\n<span font='JetBrainsMonoMedium Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+    },
+    "clock#date": {
+        "format": "{:%a, %d %b}",
+        "format-alt": "{:%d-%m-%Y}",
+        "interval": 60,
+        "today-format": "<span color='#f44336'><b>{}</b></span>",
+        "tooltip-format": "<span font='JetBrainsMonoMedium Nerd Font 18'><big>{:%d, %B %Y}</big></span>\n<span font='JetBrainsMonoMedium Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+        "on-click-right": "google-chrome-stable --new-tab https://calendar.google.com"
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%H:%M:%S}",
+        "interval": 1,
+        "today-format": "<span color='#f44336'><b>{}</b></span>",
+        "tooltip-format": "<span font='JetBrainsMonoMedium Nerd Font 18'><big>{:%d, %B %Y}</big></span>\n<span font='JetBrainsMonoMedium Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+        "on-click-right": "google-chrome-stable --new-tab https://calendar.google.com"
+    },
+    "custom/power": {
+        "format":"󰤆",
+        "on-click": "wlogout --layout .config/wlogout/layout --css .config/wlogout/style.css -b 2 -r 10px -c 10px",
+        "tooltip": false
+    }
+}

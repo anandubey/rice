@@ -1,0 +1,21 @@
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+font=JetBrainsMono Nerd Font 11
+background-color=#3c3836
+text-color=#f9f5d7
+margin=5,2,10
+padding=6,10,6,10
+border-size=1
+border-color=#504945
+border-radius=2
+default-timeout=8000
+anchor=top-right
+max-visible=10
+height=150
+
+
+[urgency=high]
+border-color=#ea6962
+default-timeout=0
+border-size=2
+layer=overlay

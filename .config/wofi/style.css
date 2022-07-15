@@ -1,0 +1,69 @@
+/******************************************************
+*			Wofi Launcher Style
+*			author:- anandubey    
+*******************************************************/
+
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+#window {
+	font-family: JetBrainsMonoMedium Nerd Font;
+	font-size:14;
+	font-weight: 500;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+	background-color: transparent;
+}	
+
+#outer-box {
+	background-color: #282828;
+	border-radius: 10px;
+	border: 2px solid #4C4C4C;
+	padding: 10px
+}
+
+#input {
+	color: #d2d7e3;
+	border: none;
+	background-color: #3f3f3f;
+	border-radius: 40px;
+	margin: 10px 5px 10px 5px;
+	padding: 3px 12px 3px 12px;
+}
+
+#scroll{
+	color: #d2d7e3;
+	border:0px;
+	margin: 10px 5px 10px 5px;
+}
+#input-box{
+	border: 0px;
+}
+
+#entry {
+	border:0px;
+	padding: 5px 2px 5px 2px;
+}
+
+#entry:selected {
+	color: #282828;
+	border-radius: 40px;
+	border-color: black;
+	background-image: linear-gradient(to right, #cc95c0, #df9cb2, #e8a6a8, #e8b4a2, #e4c2a5, #d5c7a1, #c3cba4, #b0ceae, #8dc8b6, #70bec4, #68b2d0, #7aa1d2);
+	padding: 7px;
+}
+
+#img{
+	margin: 2px 10px 2px 5px;
+}
+
+#text{
+	color: #d2d7e3;
+}
+#text:selected {
+	color: #1e2122;
+	border: none;
+}

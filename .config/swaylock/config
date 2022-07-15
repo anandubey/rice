@@ -1,0 +1,28 @@
+# indicator
+# no-unlock-indicator
+# daemonize
+indicator-caps-lock
+# datestr=%A
+image=$HOME/.local/share/bg/solar-system.jpg
+scaling=fill
+font=JetBrainsMonoMedium Nerd Font Mono
+font-size=24
+
+
+# Ring
+indicator-radius=155
+# line-uses-ring
+line-color=#282828
+text-color=#ebdbb2
+inside-color=#28282898
+inside-ver-color=#b8ba25
+line-ver-color=#8ec07b
+ring-ver-color=#8ec07b98
+ring-color=#655b53
+key-hl-color=#8ec07b
+separator-color=#655b53
+layout-text-color=#ebdbb2
+inside-wrong-color=#ec6b64
+line-clear-color=#e78a4e
+inside-clear-color=#e78a4e
+

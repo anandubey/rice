@@ -1,0 +1,466 @@
+/* ============================================================================
+ *
+ *  Waybar config
+ *  @author:- anandubey
+ *
+ * ==========================================================================*/
+
+
+ 
+* {
+    font-family: 'JetBrainsMonoMedium Nerd Font',
+                 'Material Design Icons',
+                 'Font Awesome 6 Free Solid';
+    min-height: 0;
+    min-width: 0;
+    border: none;
+}
+
+window#waybar {
+    background: #1e2122;
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+tooltip {
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 14px;
+    padding: 5px;
+    background-color: #3c3836;
+    animation-name: fadein;
+    animation-duration: 0.2s;
+    border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+    text-shadow: none;
+    border: 1px solid #5d6061;
+}
+tooltip label {
+    margin: 10px;
+    color: #aeab96;
+}
+
+
+/* ============================================================================
+ *  
+ *  WORKSPACE
+ * 
+ * ==========================================================================*/
+#workspaces{
+    background-color: #3c3836;
+    margin: 2px 0 2px 0;
+}
+#workspaces button {
+    font-family: 'Material Design Icons';
+    font-size: 10px;
+    color: #7c6f64;
+    padding: 0 4px 0 4px;
+    margin: 0 2px 0 2px;
+    border-radius: 2px;
+}
+
+#workspaces button:hover {
+    color: #3c3836;
+    background: #7c6f64;
+    box-shadow: none;
+    text-shadow: none;
+    border-color: #7c6f64;
+    border-radius: 2px;
+    transition: 0;
+}
+
+#workspaces button#sway-workspace-1 {
+    font-size: 14px;
+    font-weight: 800;
+}
+#workspaces button#sway-workspace-1.current_output {
+    color:#A6E3A1;
+}
+#workspaces button#sway-workspace-2.current_output {
+    color: #f86e61;
+}
+#workspaces button#sway-workspace-3.current_output {
+    color: #BAC2DE;
+}
+#workspaces button#sway-workspace-4.current_output {
+    color: #F9E2AF;
+}
+#workspaces button#sway-workspace-5.current_output {
+    color: #F38BA8;
+}
+#workspaces button#sway-workspace-1.focused {
+    color: #1e2122;
+    background-color: #A6E3A1;
+}
+#workspaces button#sway-workspace-2.focused {
+    color: #1e2122;
+    background-color: #f86e61;
+}
+#workspaces button#sway-workspace-3.focused {
+    color: #1e2122;
+    background-color: #BAC2DE;
+}
+#workspaces button#sway-workspace-4.focused {
+    color: #1e2122;
+    background-color: #F9E2AF;
+}
+#workspaces button#sway-workspace-5.focused {
+    color: #1e2122;
+    background-color: #F38BA8;
+}
+
+
+
+/* ============================================================================
+ *  
+ *  WINDOW
+ * 
+ * ==========================================================================*/
+#custom-seperator{
+    font-family: 'Font Awesome 6 Free Solid';
+    font-size: 12px;
+    color: #5a5d5e;
+    margin: 0 0 0 14px;
+}
+
+#window{
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 10px;
+    color: #f9f5d7;
+    background-color: #3c3836;
+    padding: 0 10px 0 10px;
+    margin: 2px 0 2px 5px;
+}
+#waybar.empty #window{
+    opacity: 0;
+}
+
+
+
+/* ============================================================================
+ *  
+ *  Music Player Daemon
+ * 
+ * ==========================================================================*/
+ #mpd.icon{
+    font-size: 14px;
+    color: #1e2122;
+    background-image: linear-gradient(to right, #cc95c0, #df9cb2, #e8a6a8);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 2px 0 2px 0;
+    padding: 0 3px 0 6px;
+}
+
+#mpd.icon.paused{
+    background-image: none;
+    background-color: #3c3836;
+    color: #a3a3a4;
+}
+
+#mpd.stopped{
+    background-image: none;
+    background-color: #3c3836;
+    color: #a3a3a4;
+}
+#mpd.disconnected{
+    background-image: none;
+    background-color: #3c3836;
+    color: #a3a3a4;
+}
+
+#mpd{
+    font-size: 12px;
+    background-color: #1e2122;
+    color: #948a85;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    margin: 2px 0 2px 0;
+    padding: 0 6px 0 3px;
+}
+
+#mpd.playing{
+	background-image: linear-gradient(to right, #e8a6a8, #e8b4a2, #e4c2a5, #d5c7a1, #c3cba4, #b0ceae, #8dc8b6, #70bec4, #68b2d0, #7aa1d2);
+}
+#mpd.paused{
+    background-image: none;
+    background-color: #3c3836;
+    color: #948a85;
+}
+
+#mpd.stopped{
+    background-image: none;
+    background-color: #3c3836;
+    color: #948a85;
+}
+#mpd.disconnected{
+    background-image: none;
+    background-color: #3c3836;
+    color: #948a85;
+}
+
+/* ============================================================================
+ *  
+ *  IDLE INHIBITOR
+ * 
+ * ==========================================================================*/
+#idle_inhibitor {
+    font-family: 'Material Design Icons';
+    font-size: 14px;
+    color: #948a85;
+    background-color: #3c3836;
+    margin: 2px 5px 2px 0;
+    padding: 0 8px 0 8px;
+    border-radius: 1px;
+}
+
+#idle_inhibitor.activated {
+    color: #1e2122;
+    background-image: radial-gradient(circle, #f0f1f4, #e0e1e3, #d0d1d3, #c1c1c2, #b1b1b2, #a3a3a4, #959596, #888888, #787878, #696969, #5a5a5a, #4c4c4c);    padding: 0 10px 0 10px;
+    padding: 0 8px 0 8px;
+    margin: 2px 5px 2px 0;
+    border-radius: 1px;
+  
+}
+
+
+
+/* ============================================================================
+ *  
+ *  PULSEAUDIO
+ * 
+ * ==========================================================================*/
+#pulseaudio.sink-icon{
+    font-family: 'Material Design Icons';
+    font-size: 12px;
+    color: #a6e3a1;
+    background-color: #3c3836;
+    margin: 2px 0 2px 5px;
+    padding: 0 6px 0 6px;
+    border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+#pulseaudio.source-icon{
+    font-size: 11px;
+    margin: 2px 0 2px 5px;
+    border-radius: 2px;
+}
+#pulseaudio.sink{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #504945;
+    margin: 2px 0 2px 0;
+    border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+    border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+    padding: 0 6px 0 6px;
+}
+#pulseaudio.sink-icon.muted {
+    background-color: #ea6962;
+    color: #1e2122;
+}
+#pulseaudio.sink.muted{
+    color: #1e2122;
+    background-color: #F38BA8;
+}
+#pulseaudio.source-icon.source-muted{
+    color: #1e2122;
+    margin: 2px 5px 2px 5px;
+    padding: 0 8px 0 6px;
+    background-color: #ea6962;
+}
+
+
+
+/* ============================================================================
+ *  
+ *  MEMORY
+ * 
+ * ==========================================================================*/
+ #memory.icon{
+    font-family: 'Material Design Icons';
+    font-size: 14px;
+    color: #eba0ac;
+    background-color: #3c3836;
+    margin: 2px 0 2px 5px;
+    padding: 0 6px 0 6px;
+    border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+    border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+ #memory{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #504945;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+    border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+
+
+/* ============================================================================
+ *  
+ *  NETWORK
+ * 
+ * ==========================================================================*/
+ #network.icon{
+    font-family: 'Material Design Icons';
+    font-size: 12px;
+    color: #cba6f7;
+    background-color: #3c3836;
+    margin: 2px 0 2px 5px;
+    padding: 0 6px 0 6px;
+    border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+ #network{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #504945;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
+
+#network.icon.disabled {
+    color: #1e2122;
+    background-color: #ea6962;
+}
+#network.disabled {
+    color: #1e2122;
+    background-color: #ea6962;
+}
+#network.icon.disconnected {
+    color: #1e2122;
+    background-color: #ea6962;
+}
+#network.disconnected {
+    color: #1e2122;
+    background-color: #ea6962;
+}
+
+
+/* ============================================================================
+ *  
+ *  BLUETOOTH
+ * 
+ * ==========================================================================*/
+ #bluetooth{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #3c3836;
+    margin: 2px 5px 2px 5px;
+    padding: 0 6px 0 6px;
+    border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+#bluetooth.off{
+    color: #948a85;
+    background-color: #3c3836;
+}
+
+#bluetooth.on{
+    color: #83a597;
+    background-color: #3c3836;
+}
+
+#bluetooth.connected{
+    background-color: #a6e3a1;
+    color: #1e2122;
+}
+
+
+/* ============================================================================
+ *  
+ *  DATE & TIME
+ * 
+ * ==========================================================================*/
+#clock.time-icon{
+    font-family: 'Material Design Icons';
+    font-size: 12px;
+    color: #89dceb;
+    background-color: #3c3836;
+    margin: 2px 0 2px 5px;
+    padding: 0 6px 0 6px;
+}
+#clock{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #504945;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
+#clock.date-icon{
+    font-family: 'Font Awesome 6 Free Solid';
+    font-size: 10px;
+    color: #89dceb;
+    background-color: #3c3836;
+    margin: 2px 0 2px 5px;
+    padding: 0 8px 0 8px;
+}
+#clock.date{
+    font-size: 11px;
+    color: #f9f5d7;
+    background-color: #504945;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
+
+
+/* ============================================================================
+ *  
+ *  BATTERY
+ * 
+ * ==========================================================================*/
+#battery {
+    font-family: 'Font Awesome 6 Free Solid';
+    font-size: 12px;
+    color: #c7b89d;
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 0;
+}
+#battery.charging {
+    color: #89b482;
+}
+@keyframes blink {
+    to {
+        color: #2b2e2f;
+        background-color: #c7b89d;
+    }
+}
+#battery.critical:not(.charging) {
+    color: #c7b89d;
+    background: #bf616a;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#custom-power {
+    font-family: 'Material Design Icons';
+    font-size: 12px;
+    font-weight: 800;
+    color: #1e2122;
+    background-color: #cba6f7;
+    margin: 2px 0 2px 5px;
+    padding: 0 6px 0 6px;
+}
