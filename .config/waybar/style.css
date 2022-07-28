@@ -181,7 +181,7 @@ tooltip label {
 
 #mpd{
     font-size: 12px;
-    background-color: #1e2122;
+    color: #1e2122;
     color: #948a85;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -228,7 +228,9 @@ tooltip label {
 
 #idle_inhibitor.activated {
     color: #1e2122;
-    background-image: radial-gradient(circle, #f0f1f4, #e0e1e3, #d0d1d3, #c1c1c2, #b1b1b2, #a3a3a4, #959596, #888888, #787878, #696969, #5a5a5a, #4c4c4c);    padding: 0 10px 0 10px;
+/*    background-image: radial-gradient(circle, #f0f1f4, #e0e1e3, #d0d1d3, #c1c1c2, #b1b1b2, #a3a3a4, #959596, #888888, #787878, #696969, #5a5a5a, #4c4c4c); */
+
+    background-image: radial-gradient(circle, #f0f1f4, #e4e5e7, #d8d9db, #cdcdce, #c1c1c2, #aeaeaf, #9b9c9d, #898a8b, #6c6e6f, #505354, #36393a, #1e2122);
     padding: 0 8px 0 8px;
     margin: 2px 5px 2px 0;
     border-radius: 1px;
@@ -459,8 +461,8 @@ tooltip label {
     font-family: 'Material Design Icons';
     font-size: 12px;
     font-weight: 800;
-    color: #1e2122;
-    background-color: #cba6f7;
-    margin: 2px 0 2px 5px;
+    background-color: #1e2122;
+    color: #cba6f7;
+    margin: 2px 10px 2px 5px;
     padding: 0 6px 0 6px;
 }

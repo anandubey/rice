@@ -8,15 +8,16 @@
         "sway/window"
     ],
 
-    "modules-center": ["mpd#icon", "mpd"],
+    "modules-center": [
+        "clock#date-icon", "clock#date",
+        "clock#time-icon", "clock",
+    ],
 
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio#sink-icon", "pulseaudio#sink", "pulseaudio#source-icon",
         "memory#icon", "memory",
         "network#icon", "network",
-        "clock#date-icon", "clock#date",
-        "clock#time-icon", "clock",
         "custom/power"
     ],
     
