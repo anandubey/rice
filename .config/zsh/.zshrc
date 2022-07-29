@@ -10,49 +10,12 @@ setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
-
-
 # Enable colors and change prompt:
 setopt promptsubst
 autoload -U colors && colors	# Load colors
 
-# Git branch in prompt.
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git 
+eval "$(starship init zsh)"
 
-# setup a hook that runs before every ptompt. 
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-
-# add a function to check for untracked files in the directory.
-# from https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-# 
-+vi-git-untracked(){
-    if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-        git status --porcelain | grep '??' &> /dev/null ; then
-        # This will show the marker if there are any untracked files in repo.
-        # If instead you want to show the marker only if there are untracked
-        # files in $PWD, use:
-        #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
-        hook_com[staged]+='!' # signify new files with a bang
-    fi
-}
-
-zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:git:*' formats " %r/%S %b %m%u%c "
-zstyle ':vcs_info:git:*' formats "%B%{$fg[yellow]%}[%{$fg[cyan]%}%{$fg[magenta]%} %b%{$fg[yellow]%}]%B%{$fg[magenta]%} "
-# Shell Prompt
-#symbol="@"
-#PROMPT="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}$symbol%{$fg[blue]%}%M%{$fg[red]%}]%{$fg[red]%}-(%{$fg[magenta]%}%1~%{$fg[red]%})%{$fg[magenta]%}$ %b"
-PROMPT="%B%{$fg[blue]%}%(3~|%-1~/.../%2~|%~)%u%b %B%(?.%{$fg[cyan]%}.%{$fg[red]%})󰊠 %{$reset_color%}%b "
-#PROMPT="%B%{$fg[blue]%}%(3~|%-1~/.../%2~|%~)%u%b %B%(?.%{$fg[cyan]%}.%{$fg[red]%})%{$reset_color%}%b "
-RPROMPT="\$vcs_info_msg_0_"
-
-
-# Shell Prompt
-# RPROMPT='${git_prompt}%B%{$fg[blue]%}%(basename \"$VIRTUAL_ENV)%u%b'
 
 # History in cache directory:
 HISTSIZE=10000000
@@ -61,9 +24,7 @@ HISTFILE=~/.cache/zsh/history
 
 
 # Load aliases and shortcuts if existent.
-# [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
-# [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc"
 
 
 # Basic auto/tab complete:
@@ -159,13 +120,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-
-#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
-#fi
-#if [[ ! "$SSH_AUTH_SOCK" ]]; then
-#    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-#fi
 
 echo 'echo akd' > /tmp/sshpass && chmod 700 /tmp/sshpass > /dev/null 2>&1
 cat ~/.local/share/ssh/id_ed | SSH_ASKPASS=/tmp/sshpass ssh-add - > /dev/null 2>&1 && rm /tmp/sshpass > /dev/null 2>&1

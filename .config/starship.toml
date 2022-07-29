@@ -1,0 +1,112 @@
+format = "$all$character"
+
+right_format = """
+$rust\
+$lua\
+$python\
+$c\
+$cmd_duration
+"""
+
+[username]
+format = " [╭─]($style)"
+show_always = true
+style_root = "bold red"
+style_user = "fg:#d3859a"
+
+
+[hostname]
+disabled = true
+format = "[$hostname]($style) in "
+ssh_only = false
+style = "fg:#689d69"
+trim_at = "-"
+
+
+[directory]
+home_symbol = '󰥳 '# '
+style = "fg:#d3859a"
+format = '[ $path]($style) '
+truncate_to_repo = false
+truncation_length = 3
+truncation_symbol = "󰉋 /"
+
+
+[sudo]
+disabled = true
+
+
+[git_branch]
+format = "󰇙  [$symbol$branch(:$remote_branch)]($style)"
+symbol = "󰊢 "
+truncation_length = 4
+truncation_symbol = ""
+style = "fg:#b8ba25"
+
+
+[git_status]
+format = "[ $untracked$stashed$modified$staged$deleted ]($style)"
+untracked = "󰡯 "
+stashed = "󰏔 "
+modified = "󰀧 " 
+staged = "󰐖 "
+deleted = "󰅗 "
+style = "fg:#b4bbc8"
+
+
+[cmd_duration]
+disabled = false
+format = "󱎫 [$duration]($style)"
+min_time = 1
+
+
+[character]
+error_symbol = " [╰─󱎘 ](bold red)"
+success_symbol = ' [╰─󰇁 ](fg:#8ec07b)'
+
+
+[package]
+disabled = true
+
+
+[c]
+symbol = "C"
+format = "[$symbol:($name-$version )]($style)"
+version_format = "v${major}.${minor}"
+
+
+[lua]
+symbol = "󰢱 "
+format = "[$symbol:($version )]($style)"
+version_format = "v${major}.${minor}"
+
+
+[dart]
+format = "[$symbol:($version )]($style)"
+symbol = " "
+
+
+[docker_context]
+symbol = "󱢴 "
+
+
+[golang]
+format = "[$symbol:($version )]($style)"
+symbol = " "
+
+
+[nodejs]
+format = "[$symbol:($version )]($style)"
+symbol = " "
+
+
+[python]
+format = "[$symbol:($version )]($style)"
+symbol = " "
+
+
+[rust]
+format = "[$symbol:($version )]($style)"
+version_format = "v${major}.${minor}"
+symbol = "🦀"
+
