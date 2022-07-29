@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # Verbose mode for general commands
 alias cp='cp -rv --reflink=auto'
 alias mv='mv -iv'
@@ -10,7 +9,6 @@ alias ln='ln -v'
 alias chmod="chmod -c"
 alias chown="chown -c"
 alias mkdir="mkdir -v"
-
 
 # Colorize commands when possible.
 alias ls="exa -al --color=always --group-directories-first --icons"
@@ -29,7 +27,6 @@ alias ros="okular Documents/eBooks/CSE-Core/OS\ Concepts\ Galvin.pdf > /dev/null
 
 # Bind vim to neovim
 alias vim="nvim"
-alias v="nvim"
 alias sv="sudo nvim"
 alias gxx="g++ -Wall -std=c++17"
 alias gxr="g++ -std=c++17 -O3 -DNDEBUG -s"
