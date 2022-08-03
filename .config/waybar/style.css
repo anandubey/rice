@@ -60,9 +60,9 @@ tooltip label {
 }
 #workspaces button {
     font-family: 'Material Design Icons';
-    font-size: 10px;
+    font-size: 12px;
     color: #7c6f64;
-    padding: 0 4px 0 4px;
+    padding: 0 5px 0 5px;
     margin: 0 2px 0 2px;
     border-radius: 2px;
 }
@@ -78,43 +78,43 @@ tooltip label {
 }
 
 #workspaces button#sway-workspace-1 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 800;
 }
 #workspaces button#sway-workspace-1.current_output {
-    color:#A6E3A1;
+    color:#a9b665;
 }
 #workspaces button#sway-workspace-2.current_output {
-    color: #f86e61;
+    color: #e78a4e;
 }
 #workspaces button#sway-workspace-3.current_output {
-    color: #BAC2DE;
+    color: #82b3a8;
 }
 #workspaces button#sway-workspace-4.current_output {
-    color: #F9E2AF;
+    color: #d1b171;
 }
 #workspaces button#sway-workspace-5.current_output {
-    color: #F38BA8;
+    color: #ce8196;
 }
 #workspaces button#sway-workspace-1.focused {
     color: #1e2122;
-    background-color: #A6E3A1;
+    background-color: #a9b665;
 }
 #workspaces button#sway-workspace-2.focused {
     color: #1e2122;
-    background-color: #f86e61;
+    background-color: #e78a4e;
 }
 #workspaces button#sway-workspace-3.focused {
     color: #1e2122;
-    background-color: #BAC2DE;
+    background-color: #82b3a8;
 }
 #workspaces button#sway-workspace-4.focused {
     color: #1e2122;
-    background-color: #F9E2AF;
+    background-color: #d1b171;
 }
 #workspaces button#sway-workspace-5.focused {
     color: #1e2122;
-    background-color: #F38BA8;
+    background-color: #ce8196;
 }
 
 
@@ -133,8 +133,8 @@ tooltip label {
 
 #window{
     font-family: 'JetBrainsMonoMedium Nerd Font';
-    font-size: 10px;
-    color: #f9f5d7;
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #3c3836;
     padding: 0 10px 0 10px;
     margin: 2px 0 2px 5px;
@@ -247,7 +247,7 @@ tooltip label {
 #pulseaudio.sink-icon{
     font-family: 'Material Design Icons';
     font-size: 12px;
-    color: #a6e3a1;
+    color: #a9b665;
     background-color: #3c3836;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
@@ -260,8 +260,8 @@ tooltip label {
     border-radius: 2px;
 }
 #pulseaudio.sink{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #504945;
     margin: 2px 0 2px 0;
     border-top-right-radius: 2px;
@@ -271,18 +271,17 @@ tooltip label {
     padding: 0 6px 0 6px;
 }
 #pulseaudio.sink-icon.muted {
-    background-color: #ea6962;
+    background-color: #ec6b64;
     color: #1e2122;
 }
 #pulseaudio.sink.muted{
-    color: #1e2122;
-    background-color: #F38BA8;
+    color: #ec6b64;
 }
 #pulseaudio.source-icon.source-muted{
     color: #1e2122;
     margin: 2px 5px 2px 5px;
     padding: 0 8px 0 6px;
-    background-color: #ea6962;
+    background-color: #ec6b64;
 }
 
 
@@ -295,7 +294,7 @@ tooltip label {
  #memory.icon{
     font-family: 'Material Design Icons';
     font-size: 14px;
-    color: #eba0ac;
+    color: #e78a4e;
     background-color: #3c3836;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
@@ -305,8 +304,8 @@ tooltip label {
 	border-bottom-right-radius: 0;
 }
  #memory{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #504945;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
@@ -324,7 +323,7 @@ tooltip label {
  #network.icon{
     font-family: 'Material Design Icons';
     font-size: 12px;
-    color: #cba6f7;
+    color: #cc7f94;
     background-color: #3c3836;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
@@ -332,8 +331,8 @@ tooltip label {
 	border-bottom-left-radius: 2px;
 }
  #network{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #504945;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
@@ -341,19 +340,17 @@ tooltip label {
 
 #network.icon.disabled {
     color: #1e2122;
-    background-color: #ea6962;
+    background-color: #ec6b64;
 }
 #network.disabled {
-    color: #1e2122;
-    background-color: #ea6962;
+    color: #ec6b64;
 }
 #network.icon.disconnected {
     color: #1e2122;
-    background-color: #ea6962;
+    background-color: #ec6b64;
 }
 #network.disconnected {
-    color: #1e2122;
-    background-color: #ea6962;
+    color: #ec6b64;
 }
 
 
@@ -363,8 +360,8 @@ tooltip label {
  * 
  * ==========================================================================*/
  #bluetooth{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #3c3836;
     margin: 2px 5px 2px 5px;
     padding: 0 6px 0 6px;
@@ -378,12 +375,12 @@ tooltip label {
 }
 
 #bluetooth.on{
-    color: #83a597;
+    color: #a9b665;
     background-color: #3c3836;
 }
 
 #bluetooth.connected{
-    background-color: #a6e3a1;
+    background-color: #a9b665;
     color: #1e2122;
 }
 
@@ -395,30 +392,33 @@ tooltip label {
  * ==========================================================================*/
 #clock.time-icon{
     font-family: 'Material Design Icons';
-    font-size: 12px;
-    color: #89dceb;
+    font-size: 13px;
+    font-weight: normal;
+    color: #82b3a8;
     background-color: #3c3836;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
 }
 #clock{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #504945;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
 }
 #clock.date-icon{
     font-family: 'Font Awesome 6 Free Solid';
-    font-size: 10px;
-    color: #89dceb;
+    font-size: 11px;
+    color: #82b3a8;
     background-color: #3c3836;
     margin: 2px 0 2px 5px;
     padding: 0 8px 0 8px;
 }
 #clock.date{
-    font-size: 11px;
-    color: #f9f5d7;
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 12px;
+    color: #c7b89d;
     background-color: #504945;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
@@ -438,7 +438,7 @@ tooltip label {
     margin: 0 10px 0 0;
 }
 #battery.charging {
-    color: #89b482;
+    color: #a9b665;
 }
 @keyframes blink {
     to {
@@ -459,10 +459,10 @@ tooltip label {
 
 #custom-power {
     font-family: 'Material Design Icons';
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 800;
     background-color: #1e2122;
-    color: #cba6f7;
-    margin: 2px 10px 2px 5px;
+    color: #a9b665;
+    margin: 2px 7px 2px 2px;
     padding: 0 6px 0 6px;
 }
