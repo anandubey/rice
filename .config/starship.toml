@@ -38,7 +38,7 @@ disabled = true
 
 [git_branch]
 format = "󰇙  [$symbol$branch(:$remote_branch)]($style)"
-symbol = "󰊢 "
+symbol = "󰊤 "
 truncation_length = 4
 truncation_symbol = ""
 style = "fg:#b8ba25"
@@ -62,7 +62,7 @@ min_time = 1
 
 [character]
 error_symbol = " [╰─󱎘 ](bold red)"
-success_symbol = ' [╰─󰇁 ](fg:#8ec07b)'
+success_symbol = ' [╰─\$ ](fg:#8ec07b)'
 
 
 [package]
