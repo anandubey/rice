@@ -70,7 +70,7 @@ set $right l
 # Default apps
 set $term kitty
 set $menu wofi --show drun 
-set $browser firefox
+set $browser brave
 
 # Launch  terminal
 bindsym $mod+Return exec $term
@@ -199,6 +199,7 @@ bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
 
 
 #==================== Input Config
+seat seat0 xcursor_theme Qogir-manjaro-white-cursors 16
 
 input type:touchpad {
       dwt enabled
@@ -206,7 +207,10 @@ input type:touchpad {
       natural_scroll enabled
 }
 
-input type:keyboard xkb_layout "us"
+input type:keyboard {
+    xkb_layout "us"
+    xkb_options ctrl:nocaps
+}
 
 exec_always {
    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
