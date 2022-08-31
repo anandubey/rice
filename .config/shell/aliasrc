@@ -31,6 +31,16 @@ alias sv="sudo nvim"
 alias gxx="g++ -Wall -std=c++17"
 alias gxr="g++ -std=c++17 -O3 -DNDEBUG -s"
 
+# Lazygit
+alias lg="lazygit"
+
+# rust-gdb
+alias rgdb="rust-gdb"
+
+# Use ptpython
+alias py="ptpython"
+alias python="ptpython"
+
 # Replace commands with better alternatives
 alias cat="bat --style header --style rules --style snip --style changes --style header"
 alias la="exa -a --color=always --group-directories-first --icons"

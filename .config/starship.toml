@@ -24,7 +24,7 @@ trim_at = "-"
 
 
 [directory]
-home_symbol = '󰥳 '# '
+home_symbol = ' '#󰥳 '#'
 style = "fg:#d3859a"
 format = '[ $path]($style) '
 truncate_to_repo = false
@@ -59,6 +59,8 @@ disabled = false
 format = "󱎫 [$duration]($style)"
 min_time = 1
 
+[battery]
+format=""
 
 [character]
 error_symbol = " [╰─󱎘 ](bold red)"
