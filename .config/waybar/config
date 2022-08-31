@@ -1,26 +1,36 @@
 {
+    "gtk-layer-shell": false,
     "layer": "top",
     "position": "top",
-    "height": 22,
+    "height": 20,
 
     "modules-left": [
-        "sway/workspaces",
+        "custom/launcher",
+        "clock#date-icon", "clock#date",
+        "clock#time-icon", "clock",
         "sway/window"
     ],
 
     "modules-center": [
-        "clock#date-icon", "clock#date",
-        "clock#time-icon", "clock",
+        "sway/workspaces",
     ],
 
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio#sink-icon", "pulseaudio#sink", "pulseaudio#source-icon",
+        "backlight#icon", "backlight#value",
         "memory#icon", "memory",
+        "battery#icon", "battery#value",
         "network#icon", "network",
+        "tray", 
         "custom/power"
     ],
     
+    "custom/launcher": {
+        "format":"󰣇",
+        "on-click": "exec wofi -c ~/.config/wofi/config -I",
+        "tooltip": false,
+    },
 
     "sway/workspaces": {
         "disable-scroll": false,
@@ -32,6 +42,10 @@
             "3": "󰨞",
             "4": "󰉋",
             "5": "󰇮",
+            "6": "󰓇",
+            "7": "󰏿",
+            "8": "󱃮",
+            "9": "󰒱",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -41,7 +55,11 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": []
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": []
         }
     },
 
@@ -54,7 +72,8 @@
             "(.+) — Mozilla Firefox": "  $1",
             "(.*) - Google Chrome": "  $1",
             "(.*) - Visual Studio Code": "󰨞 $1",
-            "Alacritty": "󰣐 Alacritty"
+            "Alacritty": "󰣐 Alacritty",
+            "Kitty": "󰣐 Kitty"
         }
     },
 
@@ -155,16 +174,27 @@
         "on-click-middle": "pavucontrol"
     },
 
-
-    "battery": {
+    "battery#icon": {
         "states": {
+            "good": 95,
             "warning": 20,
             "critical": 10
         },
-        "format": "{icon} {capacity}%",
-        "format-icons": ["", "", "", "", "", "", "", "", "", ""]
+        "format": "{icon}",
+        "format-charging": " ",
+        "format-icons": [" ", " ", " ", " ", " "]
     },
-
+    "battery#value": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
+        "format-icons": []
+    },
 
     "memory#icon" : {
         "format": "󰍛"
@@ -228,9 +258,28 @@
         "tooltip-format": "<span font='JetBrainsMonoMedium Nerd Font 18'><big>{:%d, %B %Y}</big></span>\n<span font='JetBrainsMonoMedium Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
         "on-click-right": "google-chrome-stable --new-tab https://calendar.google.com"
     },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10,
+     },
+
+    "backlight#icon": {
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
+        "on-scroll-down": "brightnessctl -c backlight set 1%-",
+        "on-scroll-up": "brightnessctl -c backlight set +1%"
+    },
+
+    "backlight#value" :{
+         "format": "{percent}%",
+         "on-scroll-down": "brightnessctl -c backlight set 1%-",
+         "on-scroll-up": "brightnessctl -c backlight set +1%"
+    },
+
     "custom/power": {
         "format":"󰤆",
-        "on-click": "wlogout --layout .config/wlogout/layout --css .config/wlogout/style.css -b 2 -r 10px -c 10px",
+        "on-click": "exec wlogout",
         "tooltip": false
     }
 }

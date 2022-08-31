@@ -5,7 +5,42 @@
  *
  * ==========================================================================*/
 
+/*
 
+gruvchad = {
+    white = "#c7b89d",
+    darker_black = "#1a1d1e",
+    black = "#1e2122", --  nvim bg
+    black2 = "#232627",
+    one_bg = "#282b2c",
+    one_bg2 = "#393c3d",
+    one_bg3 = "#404344",
+    grey = "#484b4c",
+    grey_fg = "#575a5b",
+    grey_fg2 = "#545758",
+    light_grey = "#5a5d5e",
+    red = "#ec6b64",
+    baby_pink = "#ce8196",
+    pink = "#ff75a0",
+    line = "#2c2f30", -- for lines like vertsplit
+    green = "#89b482",
+    vibrant_green = "#a9b665",
+    nord_blue = "#6f8faf",
+    blue = "#6d8dad",
+    yellow = "#d6b676",
+    sun = "#d1b171",
+    purple = "#b4bbc8",
+    dark_purple = "#cc7f94",
+    teal = "#749689",
+    orange = "#e78a4e",
+    cyan = "#82b3a8",
+    statusline_bg = "#222526",
+    lightbg = "#2d3031",
+    lightbg2 = "#252829",
+    pmenu_bg = "#89b482",
+    folder_bg = "#6d8dad",
+}
+*/
  
 * {
     font-family: 'JetBrainsMonoMedium Nerd Font',
@@ -33,7 +68,7 @@ tooltip {
     font-family: 'JetBrainsMonoMedium Nerd Font';
     font-size: 14px;
     padding: 5px;
-    background-color: #3c3836;
+    background-color: #393c3d;
     animation-name: fadein;
     animation-duration: 0.2s;
     border-top-left-radius: 2px;
@@ -48,6 +83,13 @@ tooltip label {
     color: #aeab96;
 }
 
+#custom-launcher {
+    background-color: #6d8dad;
+    color: #1a1d1e;
+    font-size: 14px;
+    padding: 0 5px 0 5px;
+    margin: 2px 0 2px 0;
+}
 
 /* ============================================================================
  *  
@@ -55,7 +97,7 @@ tooltip label {
  * 
  * ==========================================================================*/
 #workspaces{
-    background-color: #3c3836;
+    background-color: #393c3d;
     margin: 2px 0 2px 0;
 }
 #workspaces button {
@@ -68,7 +110,7 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    color: #3c3836;
+    color: #393c3d;
     background: #7c6f64;
     box-shadow: none;
     text-shadow: none;
@@ -79,6 +121,14 @@ tooltip label {
 
 #workspaces button#sway-workspace-1 {
     font-size: 16px;
+    font-weight: 800;
+}
+#workspaces button#sway-workspace-7 {
+    font-size: 13px;
+    font-weight: 800;
+}
+#workspaces button#sway-workspace-8 {
+    font-size: 14px;
     font-weight: 800;
 }
 #workspaces button#sway-workspace-1.current_output {
@@ -96,6 +146,20 @@ tooltip label {
 #workspaces button#sway-workspace-5.current_output {
     color: #ce8196;
 }
+
+#workspaces button#sway-workspace-6.current_output {
+    color:#a9b665;
+}
+#workspaces button#sway-workspace-7.current_output {
+    color: #e78a4e;
+}
+#workspaces button#sway-workspace-8.current_output {
+    color: #82b3a8;
+}
+#workspaces button#sway-workspace-9.current_output {
+    color: #d1b171;
+}
+
 #workspaces button#sway-workspace-1.focused {
     color: #1e2122;
     background-color: #a9b665;
@@ -116,7 +180,22 @@ tooltip label {
     color: #1e2122;
     background-color: #ce8196;
 }
-
+#workspaces button#sway-workspace-6.focused {
+    color: #1e2122;
+    background-color: #e78a4e;
+}
+#workspaces button#sway-workspace-7.focused {
+    color: #1e2122;
+    background-color: #82b3a8;
+}
+#workspaces button#sway-workspace-8.focused {
+    color: #1e2122;
+    background-color: #d1b171;
+}
+#workspaces button#sway-workspace-9.focused {
+    color: #1e2122;
+    background-color: #ce8196;
+}
 
 
 /* ============================================================================
@@ -135,7 +214,7 @@ tooltip label {
     font-family: 'JetBrainsMonoMedium Nerd Font';
     font-size: 12px;
     color: #c7b89d;
-    background-color: #3c3836;
+    background-color: #393c3d;
     padding: 0 10px 0 10px;
     margin: 2px 0 2px 5px;
 }
@@ -164,18 +243,18 @@ tooltip label {
 
 #mpd.icon.paused{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #a3a3a4;
 }
 
 #mpd.stopped{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #a3a3a4;
 }
 #mpd.disconnected{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #a3a3a4;
 }
 
@@ -196,18 +275,18 @@ tooltip label {
 }
 #mpd.paused{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #948a85;
 }
 
 #mpd.stopped{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #948a85;
 }
 #mpd.disconnected{
     background-image: none;
-    background-color: #3c3836;
+    background-color: #393c3d;
     color: #948a85;
 }
 
@@ -220,7 +299,7 @@ tooltip label {
     font-family: 'Material Design Icons';
     font-size: 14px;
     color: #948a85;
-    background-color: #3c3836;
+    background-color: #393c3d;
     margin: 2px 5px 2px 0;
     padding: 0 8px 0 8px;
     border-radius: 1px;
@@ -248,7 +327,7 @@ tooltip label {
     font-family: 'Material Design Icons';
     font-size: 12px;
     color: #a9b665;
-    background-color: #3c3836;
+    background-color: #393c3d;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
     border-top-left-radius: 2px;
@@ -262,7 +341,7 @@ tooltip label {
 #pulseaudio.sink{
     font-size: 12px;
     color: #c7b89d;
-    background-color: #504945;
+    background-color: #484b4c;
     margin: 2px 0 2px 0;
     border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
@@ -278,10 +357,10 @@ tooltip label {
     color: #ec6b64;
 }
 #pulseaudio.source-icon.source-muted{
-    color: #1e2122;
+    color: #ec6b64;
     margin: 2px 5px 2px 5px;
     padding: 0 8px 0 6px;
-    background-color: #ec6b64;
+    background-color: #484b4c;
 }
 
 
@@ -294,8 +373,8 @@ tooltip label {
  #memory.icon{
     font-family: 'Material Design Icons';
     font-size: 14px;
-    color: #e78a4e;
-    background-color: #3c3836;
+    color: #d1b171;
+    background-color: #393c3d;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
     border-top-left-radius: 2px;
@@ -306,7 +385,7 @@ tooltip label {
  #memory{
     font-size: 12px;
     color: #c7b89d;
-    background-color: #504945;
+    background-color: #484b4c;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
     border-top-right-radius: 2px;
@@ -324,7 +403,7 @@ tooltip label {
     font-family: 'Material Design Icons';
     font-size: 12px;
     color: #cc7f94;
-    background-color: #3c3836;
+    background-color: #393c3d;
     margin: 2px 0 2px 5px;
     padding: 0 6px 0 6px;
     border-top-left-radius: 2px;
@@ -333,7 +412,7 @@ tooltip label {
  #network{
     font-size: 12px;
     color: #c7b89d;
-    background-color: #504945;
+    background-color: #484b4c;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
 }
@@ -362,7 +441,7 @@ tooltip label {
  #bluetooth{
     font-size: 12px;
     color: #c7b89d;
-    background-color: #3c3836;
+    background-color: #393c3d;
     margin: 2px 5px 2px 5px;
     padding: 0 6px 0 6px;
     border-top-right-radius: 2px;
@@ -371,12 +450,12 @@ tooltip label {
 
 #bluetooth.off{
     color: #948a85;
-    background-color: #3c3836;
+    background-color: #393c3d;
 }
 
 #bluetooth.on{
     color: #a9b665;
-    background-color: #3c3836;
+    background-color: #393c3d;
 }
 
 #bluetooth.connected{
@@ -390,28 +469,11 @@ tooltip label {
  *  DATE & TIME
  * 
  * ==========================================================================*/
-#clock.time-icon{
-    font-family: 'Material Design Icons';
-    font-size: 13px;
-    font-weight: normal;
-    color: #82b3a8;
-    background-color: #3c3836;
-    margin: 2px 0 2px 5px;
-    padding: 0 6px 0 6px;
-}
-#clock{
-    font-family: 'JetBrainsMonoMedium Nerd Font';
-    font-size: 12px;
-    color: #c7b89d;
-    background-color: #504945;
-    margin: 2px 5px 2px 0;
-    padding: 0 6px 0 6px;
-}
 #clock.date-icon{
     font-family: 'Font Awesome 6 Free Solid';
     font-size: 11px;
-    color: #82b3a8;
-    background-color: #3c3836;
+    color: #ff75a0;
+    background-color: #393c3d;
     margin: 2px 0 2px 5px;
     padding: 0 8px 0 8px;
 }
@@ -419,36 +481,66 @@ tooltip label {
     font-family: 'JetBrainsMonoMedium Nerd Font';
     font-size: 12px;
     color: #c7b89d;
-    background-color: #504945;
+    background-color: #484b4c;
     margin: 2px 5px 2px 0;
     padding: 0 6px 0 6px;
 }
 
+#clock.time-icon{
+    font-family: 'Material Design Icons';
+    font-size: 13px;
+    font-weight: normal;
+    color: #ff75a0;
+    background-color: #393c3d;
+    margin: 2px 0 2px 0;
+    padding: 0 6px 0 6px;
+}
+#clock{
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 12px;
+    color: #c7b89d;
+    background-color: #484b4c;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
 
 /* ============================================================================
  *  
  *  BATTERY
  * 
  * ==========================================================================*/
-#battery {
-    font-family: 'Font Awesome 6 Free Solid';
-    font-size: 12px;
-    color: #c7b89d;
-    padding: 0 10px 0 10px;
-    margin: 0 10px 0 0;
+#battery.icon {
+    font-size: 11px;
+    background-color: #393c3d;
+    color: #749689;
+    margin: 2px 0 2px 5px;
+    padding: 0 8px 0 8px;
 }
-#battery.charging {
+#battery.value {
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 12px;
+    background-color: #484b4c;
+    color: #c7b89d;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
+#battery.icon.charging {
     color: #a9b665;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 @keyframes blink {
     to {
-        color: #2b2e2f;
-        background-color: #c7b89d;
+        color: #c7b89d;
+        background-color: #393c3d;
     }
 }
-#battery.critical:not(.charging) {
-    color: #c7b89d;
-    background: #bf616a;
+#battery.icon.critical:not(.charging) {
+    color: #1e2122;
+    background: #ec6b64;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -456,6 +548,22 @@ tooltip label {
     animation-direction: alternate;
 }
 
+#backlight.icon {
+    font-family: 'Material Design Icons';
+    font-size: 12px;
+    background-color: #393c3d;
+    color: #e78a4e;
+    margin: 2px 0 2px 5px;
+    padding: 0 8px 0 8px;
+}
+#backlight.value {
+    font-family: 'JetBrainsMonoMedium Nerd Font';
+    font-size: 12px;
+    background-color: #484b4c;
+    color: #c7b89d;
+    margin: 2px 5px 2px 0;
+    padding: 0 6px 0 6px;
+}
 
 #custom-power {
     font-family: 'Material Design Icons';
@@ -465,4 +573,14 @@ tooltip label {
     color: #a9b665;
     margin: 2px 7px 2px 2px;
     padding: 0 6px 0 6px;
+}
+
+
+#tray {
+    background-color: #a9b665;
+    color: #ec6b64;
+}
+#tray > .passive {
+    background-color: #ffffff;
+    color: blue;
 }
